@@ -19,10 +19,5 @@ module.exports = {
                 loader: 'ts-loader'
             }
         ]
-    },
-    plugins: [
-        new webpack.NormalModuleReplacementPlugin(/typeorm$/, function (result) {
-            result.request = result.request.replace(/typeorm/, "typeorm/browser");
-        })
-    ]
+    }
 };
